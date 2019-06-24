@@ -27,8 +27,10 @@ function handler() {
           scores[playersTurn] += cell.winValue;
 
           document.getElementById(cell.id).onclick = "";
+        if (event.target.innerHTML == ""){
           document.getElementById(cell.id).innerHTML =
             "<span>" + markers[playersTurn] + "</span>";
+          }
           winChecker();
           if (!gameOver) {
             changePlayer();
